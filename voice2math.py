@@ -14,7 +14,7 @@ while(1):
     try:
         speechText=r.recognize_google(audioData)
     except sr.UnknownValueError:
-        print("Try agian")
+        print("Try again")
         continue
     print(speechText)
     speechText=ps.parseSpeech(speechText)
@@ -24,16 +24,9 @@ while(1):
     result = tm.textMath(speechText)
 
     if result==None:
-        print("Try agian")
+        print("Try again")
     else:    
         print("= " + str(result))
 
     
 
-
-
-    
-
-
-
-    
